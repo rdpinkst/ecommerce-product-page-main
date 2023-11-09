@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
   
   <title>Frontend Mentor | E-commerce product page</title>
 
@@ -15,26 +16,60 @@
   </style>
 </head>
 <body>
+  <header>
+    <img src="./images/icon-menu.svg" alt="menu drop down">
+    <img class="logo" src="./images/logo.svg" alt="Sneakers">
+    <nav class="hide">
+      <ul>
+        <li>Collections</li>
+        <li>Men</li>
+        <li>Women</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <img class="shopping-cart" src="./images/icon-cart.svg" alt="shopping cart">
+    <img class="avatar" src="./images/image-avatar.png" alt="profile image">
+  </header>
+  <main>
+    <section class="sneaker-pics">
+      <div class="main-image-container">
+        <div class="white-circle">
+          <img class=" previous switch-image" src="./images/icon-previous.svg" alt="back arrow">
+        </div>
+        
+        <img class="main-sneaker" src="./images/image-product-1.jpg" alt="sneakers">
+        <img class=" next switch-image" src="./images/icon-next.svg" alt="next arrow">
+      </div>
+      
+      <div class="sneaker-previews hide">
+        <img src="./images/image-product-1-thumbnail.jpg" alt="sneaker">
+        <img src="./images/image-product-2-thumbnail.jpg" alt="sneaker">
+        <img src="./images/image-product-3-thumbnail.jpg" alt="sneaker">
+        <img src="./images/image-product-4-thumbnail.jpg" alt="sneaker">
+      </div>  
+    </section>
+    <section>
+      <h1>Sneaker Company</h1>
+      <h2>Fall Limited Edition Sneakers</h2>
+      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+  durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <p>$125.00</p>
+      <p>50%</p>
+      <p>$250.00</p>
+      <p>0</p>
+      <button>Add to cart</button>
+    </section>
+  </main>
+  
+  
+  
+  
+  
+  
 
-  Collections
-  Men
-  Women
-  About
-  Contact
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
+  
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

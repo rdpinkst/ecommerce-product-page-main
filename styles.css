@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+/* Mobile header styles */
+header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+.logo {
+    margin-left: 1rem;
+}
+.hide {
+    display: none;
+}
+.shopping-cart {
+    margin-left: auto;
+}
+.avatar {
+    height: 2rem;
+    margin-left: 1rem;
+}
+
+/* Section styling mobile design */
+.sneaker-pics {
+    position: relative;
+}
+.main-sneaker {
+    width: 100%;
+}
+/* .switch-image {
+    position: absolute;
+    top: 10rem;
+} */
+.previous {
+    left: 3rem
+}
+.next {
+    left: 21rem;
+}
+.white-circle{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 10rem;
+    display: flex;
+    align-items: center;
+}
