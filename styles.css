@@ -1,9 +1,21 @@
+:root {
+    --orange: hsl(26, 100%, 55%);
+    --pale-orange: hsl(25, 100%, 94%);
+    --very-dark-blue: hsl(220, 13%, 13%);
+    --dark-grayish-blue: hsl(219, 9%, 45%);
+    --grayish-blue: hsl(220, 14%, 75%);
+    --light-grayish-blue: hsl(223, 64%, 98%);
+    --white: hsl(0, 0%, 100%);
+
+}
 * {
     box-sizing: border-box;
 }
 body {
     margin: 0;
     padding: 0;
+    font-size: 16px;
+    font-family: 'Kumbh Sans', sans-serif;
 }
 /* Mobile header styles */
 header {
@@ -32,17 +44,22 @@ header {
 .main-sneaker {
     width: 100%;
 }
-/* .switch-image {
+.switch-image {
+    margin: 0 0.5rem;
     position: absolute;
-    top: 10rem;
-} */
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: white;
+    top: 50%;
+    cursor: pointer;
+}
 .previous {
-    left: 3rem
+    left: 1rem
 }
 .next {
-    left: 21rem;
+    right: 1rem;
 }
-.white-circle{
+/* .white-circle{
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
@@ -51,4 +68,4 @@ header {
     top: 10rem;
     display: flex;
     align-items: center;
-}
+} */
