@@ -6,7 +6,6 @@
     --grayish-blue: hsl(220, 14%, 75%);
     --light-grayish-blue: hsl(223, 64%, 98%);
     --white: hsl(0, 0%, 100%);
-
 }
 * {
     box-sizing: border-box;
@@ -16,6 +15,10 @@ body {
     padding: 0;
     font-size: 16px;
     font-family: 'Kumbh Sans', sans-serif;
+}
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
 }
 /* Mobile header styles */
 header {
@@ -59,13 +62,55 @@ header {
 .next {
     right: 1rem;
 }
-/* .white-circle{
-    height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
-    background-color: white;
-    position: absolute;
-    top: 10rem;
+/* Sneaker info styling */
+.sneaker-info {
+    padding: 1rem;
+}
+.company-name {
+    text-transform: uppercase;
+    color: var(--orange);
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+.sneaker-name {
+    color: var(--very-dark-blue);
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+.sneaker-information {
+    color: var(--dark-grayish-blue);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+.pricing {
     display: flex;
     align-items: center;
-} */
+}
+.price {
+    color: var(--very-dark-blue);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+.percent-off{
+    margin-left: 1rem;
+    color: var(--orange);
+    background-color: var(--pale-orange);
+    padding: 0.2rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.original-price {
+    margin-left: auto;
+    color: var(--grayish-blue);
+    font-weight: 700;
+    text-decoration: line-through;
+}
+.quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-grayish-blue);
+    border-radius: .75rem;
+    padding: 0 1.5rem;
+}
