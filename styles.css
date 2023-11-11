@@ -114,3 +114,31 @@ header {
     border-radius: .75rem;
     padding: 0 1.5rem;
 }
+button {
+    display: flex;
+    justify-content: center;
+    border:none;
+    width: 100%;
+    border-radius: 0.5rem;
+    background-color: var(--orange);
+    color: var(--white);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+.icon {
+    display: inline-block;
+    background: var(--white);
+    height: 20px;
+    width: 20px;
+    margin: auto 0;
+    mask-size: cover;
+}
+.icon-cart {
+    mask: url(./images/icon-cart.svg);
+}
+
+button > p {
+    margin-left: 0.75rem;
+}
