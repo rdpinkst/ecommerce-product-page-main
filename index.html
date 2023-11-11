@@ -19,18 +19,29 @@
   </style>
 </head>
 <body>
+  <nav id="mobile" class="hide">
+    <img class="close" src="./images/icon-close.svg" alt="close x">
+    <ul>
+      <li><a href="#">Collections</a></li>
+      <li><a href="#">Men</a></li>
+      <li><a href="#">Women</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
   <header>
-    <img src="./images/icon-menu.svg" alt="menu drop down">
+    <img class="hamburger" src="./images/icon-menu.svg" alt="menu drop down">
     <img class="logo" src="./images/logo.svg" alt="Sneakers">
-    <nav class="hide">
+    <!-- <nav id="mobile" class="hide">
+      <img class="close" src="./images/icon-close.svg" alt="close x">
       <ul>
-        <li>Collections</li>
-        <li>Men</li>
-        <li>Women</li>
-        <li>About</li>
-        <li>Contact</li>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
-    </nav>
+    </nav> -->
     <img class="shopping-cart" src="./images/icon-cart.svg" alt="shopping cart">
     <img class="avatar" src="./images/image-avatar.png" alt="profile image">
   </header>
@@ -60,17 +71,17 @@
         <p class="original-price">$250.00</p>
       </div>  
       <div class="quantity">
-        <img src="./images/icon-minus.svg" alt="minus sign">
-        <p>0</p>
-        <img src="./images/icon-plus.svg" alt="plus sign">
+        <img class="minus" src="./images/icon-minus.svg" alt="minus sign">
+        <p class="quantity-item">0</p>
+        <img class="plus" src="./images/icon-plus.svg" alt="plus sign">
       </div>
       
       <button>
         <span class="icon icon-cart"></span>
-        <!-- <img src="./images/icon-cart.svg" alt="shopping card"> -->
         <p>Add to cart</p>
       </button>
     </section>
+    <script src="scripts.js"></script>
   </main>
   
   
