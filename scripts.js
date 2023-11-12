@@ -9,6 +9,7 @@ const sneakerPic = document.querySelector(".main-sneaker");
 const quantity = document.querySelector(".quantity-item");
 const plus = document.querySelector(".plus");
 const minus = document.querySelector(".minus");
+const shoppingCart = document.querySelector(".shopping-cart")
 
 dropDown.addEventListener("click", (event) => {
     menu.classList.remove("hide");
@@ -22,8 +23,8 @@ close.addEventListener("click", (event) => {
     headerContent.classList.remove("blur");
 })
 
-next.addEventListener("click", newPicture)
-previous.addEventListener("click", newPicture)
+next.addEventListener("click", newPicture);
+previous.addEventListener("click", newPicture);
 
 function newPicture(event) {
     const strPic = sneakerPic.getAttribute("src");
@@ -49,4 +50,22 @@ function changePicture(srcString, direction) {
     return array.join("-");
 }
 
+function quantityIncrement(event) {
+    let number = parseInt(quantity.textContent);
+    let str = '';
+    if(event.target.classList.contains("plus")) {
+        number += 1;
+    } else if (event.target.classList.contains("minus") && number > 0) {
+        number -= 1;
+    } 
+    str = number;
+    quantity.textContent = number;
+}
 
+plus.addEventListener("click", quantityIncrement);
+minus.addEventListener("click", quantityIncrement);
+shoppingCart.addEventListener("click", (e) => {
+    const cart = document.querySelector("#cart");
+    cart.classList.toggle("cart")
+    cart.classList.toggle("hide");
+})

@@ -145,6 +145,9 @@ a {
     border-radius: .75rem;
     padding: 0 1.5rem;
 }
+.plus, .minus, .shopping-cart {
+    cursor: pointer;
+}
 button {
     display: flex;
     justify-content: center;
@@ -172,4 +175,30 @@ button {
 
 button > p {
     margin-left: 0.75rem;
+}
+/* Cart styling */
+.cart {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 5rem;
+    left: 2.5%;
+    background-color: var(--white);
+    width: 95%;
+    min-height: 30%;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+}
+.cart > h2 {
+    padding: 1rem;
+}
+.divider {
+    border: 1px solid var(--very-dark-blue);
+    width: 100%;
+}
+.cart-item {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
