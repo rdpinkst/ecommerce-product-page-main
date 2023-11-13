@@ -9,7 +9,10 @@ const sneakerPic = document.querySelector(".main-sneaker");
 const quantity = document.querySelector(".quantity-item");
 const plus = document.querySelector(".plus");
 const minus = document.querySelector(".minus");
-const shoppingCart = document.querySelector(".shopping-cart")
+const shoppingCart = document.querySelector(".shopping-cart");
+const addToCart = document.querySelector(".add-cart");
+
+let itemCount = 0;
 
 dropDown.addEventListener("click", (event) => {
     menu.classList.remove("hide");
@@ -64,8 +67,19 @@ function quantityIncrement(event) {
 
 plus.addEventListener("click", quantityIncrement);
 minus.addEventListener("click", quantityIncrement);
+
 shoppingCart.addEventListener("click", (e) => {
     const cart = document.querySelector("#cart");
     cart.classList.toggle("cart")
     cart.classList.toggle("hide");
+})
+
+addToCart.addEventListener("click", (e) => {
+    let numberQuantity = parseInt(quantity.textContent);
+
+    if(numberQuantity > 0) {
+        itemCount += numberQuantity;
+        quantity.textContent = 0;
+    }
+    console.log(numberQuantity)
 })
