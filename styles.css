@@ -63,8 +63,24 @@ a {
 .hide {
     display: none;
 }
-.shopping-cart {
+.number-items {
+    position: relative;
     margin-left: auto;
+    margin-right: 1rem;
+}
+.orange-circle {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0rem 0.5rem;
+    border-radius: 45%;
+    background-color: var(--orange);
+    top: -0.45rem;
+    right: -0.65rem;
 }
 .avatar {
     height: 2rem;

@@ -11,6 +11,7 @@ const plus = document.querySelector(".plus");
 const minus = document.querySelector(".minus");
 const shoppingCart = document.querySelector(".shopping-cart");
 const addToCart = document.querySelector(".add-cart");
+const quantityDisplay = document.querySelector(".orange-circle")
 
 let itemCount = 0;
 
@@ -77,9 +78,11 @@ shoppingCart.addEventListener("click", (e) => {
 addToCart.addEventListener("click", (e) => {
     let numberQuantity = parseInt(quantity.textContent);
 
+
     if(numberQuantity > 0) {
         itemCount += numberQuantity;
         quantity.textContent = 0;
+        quantityDisplay.textContent = itemCount.toString();
     }
     console.log(numberQuantity)
 })
