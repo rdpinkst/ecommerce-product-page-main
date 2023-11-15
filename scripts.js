@@ -11,7 +11,8 @@ const plus = document.querySelector(".plus");
 const minus = document.querySelector(".minus");
 const shoppingCart = document.querySelector(".shopping-cart");
 const addToCart = document.querySelector(".add-cart");
-const quantityDisplay = document.querySelector(".orange-circle")
+const quantityDisplay = document.querySelector(".orange-circle");
+const deleteItem = document.querySelector(".delete");
 
 let itemCount = 0;
 
@@ -85,4 +86,10 @@ addToCart.addEventListener("click", (e) => {
         quantityDisplay.textContent = itemCount.toString();
     }
     console.log(numberQuantity)
+})
+
+deleteItem.addEventListener("click", () => {
+    console.log("done")
+    itemCount = 0;
+    quantityDisplay.textContent = "";
 })
