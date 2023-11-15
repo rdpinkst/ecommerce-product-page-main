@@ -13,6 +13,9 @@ const shoppingCart = document.querySelector(".shopping-cart");
 const addToCart = document.querySelector(".add-cart");
 const quantityDisplay = document.querySelector(".orange-circle");
 const deleteItem = document.querySelector(".delete");
+const itemsInCart = document.querySelector(".full");
+const emptyCart = document.querySelector(".empty");
+const cartStyles = document.querySelector(".different-cart");
 
 let itemCount = 0;
 
@@ -72,8 +75,38 @@ minus.addEventListener("click", quantityIncrement);
 
 shoppingCart.addEventListener("click", (e) => {
     const cart = document.querySelector("#cart");
-    cart.classList.toggle("cart")
+
+    //Input names
+    const itemBuying = document.querySelector(".item-name");
+    const priceItem = document.querySelector(".price-item");
+    const quantityItem = document.querySelector(".quantity-item-buy");
+    const totalCost = document.querySelector(".total-cost");
+    
+
+    //Get item name and cost
+    const itemName = document.querySelector(".sneaker-name").textContent;
+    const price = parseInt(document.querySelector(".price").textContent.split("$")[1])
+    
+
+    cart.classList.toggle("cart");
     cart.classList.toggle("hide");
+
+    if(itemCount === 0) {
+        itemsInCart.classList.add("hide");
+        emptyCart.classList.remove("hide");
+
+    } else {
+        console.log(itemCount)
+        itemsInCart.classList.remove("hide");
+        emptyCart.classList.add("hide");
+        cartStyles.classList.remove("cart-item");
+        cartStyles.classList.add("full-cart-item");
+
+        itemBuying.textContent = itemName;
+        priceItem.textContent = "$" + price.toString();
+        quantityItem.textContent = itemCount.toString();
+        totalCost.textContent = "$" + (price * itemCount).toString();
+    }
 })
 
 addToCart.addEventListener("click", (e) => {
@@ -85,11 +118,16 @@ addToCart.addEventListener("click", (e) => {
         quantity.textContent = 0;
         quantityDisplay.textContent = itemCount.toString();
     }
-    console.log(numberQuantity)
 })
 
 deleteItem.addEventListener("click", () => {
-    console.log("done")
     itemCount = 0;
     quantityDisplay.textContent = "";
+    itemsInCart.classList.add("hide");
+    emptyCart.classList.remove("hide");
+    cartStyles.classList.add("cart-item");
+    cartStyles.classList.remove("full-cart-item");
 })
+
+// If no items in cart
+// Add .cart-item

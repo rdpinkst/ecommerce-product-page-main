@@ -254,7 +254,7 @@ button > p {
 .item p:first-child {
     margin-bottom: 0.5rem;
 }
-.item span {
+.item span:last-child {
     font-weight: bold;
     color: var(--very-dark-blue);
     margin-left: 0.5rem;
