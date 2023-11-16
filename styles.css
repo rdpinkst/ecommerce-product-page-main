@@ -95,7 +95,7 @@ a {
 .main-sneaker {
      width: 100%;
 }
-.sneaker-preview {
+.sneaker-previews {
     display: none;
 }
 .switch-image {
@@ -267,7 +267,30 @@ button > p {
         display: flex;
         align-items: center;
     }
-    .sneaker-preview {
+    .switch-image {
+        display: none;
+    }
+    .sneaker-pics, .sneaker-info {
+        padding: 3rem;
+    }
+    .main-sneaker {
+        border-radius: 1.5rem;
+    }
+    .sneaker-previews {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .main-sneaker {
+        width: 35rem;
+        height: 35rem;
+    }
+    .sneaker-previews img {
+        border-radius: 1rem;
+        height: 7rem;
+        width: 7rem;
+    }
+    .quantity-button {
         display: flex;
     }
 }
