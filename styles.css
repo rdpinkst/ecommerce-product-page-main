@@ -93,7 +93,10 @@ a {
     position: relative;
 }
 .main-sneaker {
-    width: 100%;
+     width: 100%;
+}
+.sneaker-preview {
+    display: none;
 }
 .switch-image {
     margin: 0 0.5rem;
@@ -258,4 +261,13 @@ button > p {
     font-weight: bold;
     color: var(--very-dark-blue);
     margin-left: 0.5rem;
+}
+@media (min-width: 1440px) {
+    main {
+        display: flex;
+        align-items: center;
+    }
+    .sneaker-preview {
+        display: flex;
+    }
 }
