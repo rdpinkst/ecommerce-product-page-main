@@ -339,4 +339,9 @@ button > p {
     .avatar {
         height: 3rem;
     }
+    .cart {
+        width: 25%;
+        right: 6rem;
+        left: 0;
+    }
 }
