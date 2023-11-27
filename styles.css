@@ -341,7 +341,7 @@ button > p {
     }
     .cart {
         width: 25%;
-        right: 6rem;
-        left: 0;
+        left: 65%;
+        box-shadow: 2px 2px 2px 2px var(--very-dark-blue);
     }
 }
