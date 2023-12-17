@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  
+
   <title>Frontend Mentor | E-commerce product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
   <nav id="mobile" class="hide">
     <img class="close" src="./images/icon-close.svg" alt="close x">
@@ -45,7 +54,7 @@
       <div class="orange-circle"></div>
       <img class="shopping-cart" src="./images/icon-cart.svg" alt="shopping cart">
     </div>
-    
+
     <img class="avatar" src="./images/image-avatar.png" alt="profile image">
   </header>
   <main>
@@ -53,26 +62,26 @@
       <div class="main-image-container">
         <img class="switch-image previous" src="./images/icon-previous.svg" alt="back arrow">
         <img class="main-sneaker" src="./images/image-product-1.jpg" alt="sneakers">
-        <img class="switch-image next" src="./images/icon-next.svg" alt="next arrow"> 
+        <img class="switch-image next" src="./images/icon-next.svg" alt="next arrow">
       </div>
-      
+
       <div class="sneaker-previews">
         <img src="./images/image-product-1-thumbnail.jpg" alt="sneaker">
         <img src="./images/image-product-2-thumbnail.jpg" alt="sneaker">
         <img src="./images/image-product-3-thumbnail.jpg" alt="sneaker">
         <img src="./images/image-product-4-thumbnail.jpg" alt="sneaker">
-      </div>  
+      </div>
     </section>
     <section class="sneaker-info">
       <h1 class="company-name">Sneaker Company</h1>
       <h2 class="sneaker-name">Fall Limited Edition Sneakers</h2>
-      <p class="sneaker-information">These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <p class="sneaker-information">These low-profile sneakers are your perfect casual wear companion. Featuring a
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
       <div class="pricing">
         <p class="price">$125.00</p>
         <p class="percent-off">50%</p>
         <p class="original-price">$250.00</p>
-      </div>  
+      </div>
       <div class="quantity-button">
         <div class="quantity">
           <img class="minus" src="./images/icon-minus.svg" alt="minus sign">
@@ -92,25 +101,27 @@
       <div class="different-cart cart-item">
         <p class="empty">Your cart is empty.</p>
         <div class="full hide">
-        <div class="item">
-          <!-- current shoe image -->
-          <img src="./images/image-product-1.jpg" alt="shoe">
-          <div >
-            <p class="item-name"></p>
-            <p><span class="price-item"></span> x <span class="quantity-item-buy"></span> <span class="total-cost"></span></p>
+          <div class="item">
+            <!-- current shoe image -->
+            <img src="./images/image-product-1.jpg" alt="shoe">
+            <div>
+              <p class="item-name"></p>
+              <p><span class="price-item"></span> x <span class="quantity-item-buy"></span> <span
+                  class="total-cost"></span></p>
+            </div>
+            <img class="delete" src="./images/icon-delete.svg" alt="trash can">
           </div>
-          <img class="delete" src="./images/icon-delete.svg" alt="trash can">
-        </div>
-        <button>Checkout</button>
+          <button>Checkout</button>
         </div>
       </div>
     </section>
     <script src="scripts.js"></script>
   </main>
-   
+
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/rdpinkst">Ryan Pinkstaff</a>.
   </div>
 </body>
+
 </html>
