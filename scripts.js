@@ -16,6 +16,7 @@ const deleteItem = document.querySelector(".delete");
 const itemsInCart = document.querySelector(".full");
 const emptyCart = document.querySelector(".empty");
 const cartStyles = document.querySelector(".different-cart");
+const picturesClick = document.querySelector(".sneaker-previews");
 
 let itemCount = 0;
 
@@ -56,6 +57,33 @@ function changePicture(srcString, direction) {
     }
     array[lastIndex] = numbPic + array[lastIndex].slice(1);
     return array.join("-");
+}
+picturesClick.addEventListener("click", changePictureDesktop);
+
+function changePictureDesktop(event) {
+    // //Remove current active styling
+    // const currentActive = document.querySelector(".active");
+    // currentActive.classList.remove("active");
+
+    //Get src current and manipulate to make clicked image
+    const strPic = sneakerPic.getAttribute("src");
+    const arr = strPic.split("-");
+    const lastIndex = arr.length - 1;
+    const currActiveNumber = arr[lastIndex][0];
+    console.log(currActiveNumber, event.target.dataset.index)
+    arr[lastIndex] = event.target.dataset.index + arr[lastIndex].slice(1);
+
+    if(event.target.dataset.index !== currActiveNumber) {
+        const currentActive = document.querySelector(".active");
+        currentActive.classList.remove("active");
+    }
+    
+    const newSrc = arr.join("-")
+
+    //Add active class
+    event.target.parentElement.classList.add("active");
+    sneakerPic.setAttribute("src", newSrc);
+
 }
 
 function quantityIncrement(event) {
