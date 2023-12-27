@@ -19,6 +19,20 @@ const cartStyles = document.querySelector(".different-cart");
 const picturesClick = document.querySelector(".sneaker-previews");
 
 let itemCount = 0;
+let widthScreen = window.matchMedia("(min-width: 1440px)");
+
+if(widthScreen.matches) {
+    sneakerPic.addEventListener("click", lightBox)
+}
+
+widthScreen.addEventListener("change", (mm) => {
+    if(mm.matches) {
+        sneakerPic.addEventListener("click", lightBox);
+    } else {
+        sneakerPic.removeEventListener("click", lightBox);
+    }
+})
+
 
 dropDown.addEventListener("click", (event) => {
     menu.classList.remove("hide");
@@ -159,3 +173,6 @@ deleteItem.addEventListener("click", () => {
 
 // If no items in cart
 // Add .cart-item
+function lightBox() {
+    console.log("Light Box")
+}

@@ -281,6 +281,7 @@ button > p {
     main {
         display: flex;
         align-items: center;
+        margin-top: 1rem;
     }
     .switch-image {
         display: none;
@@ -299,16 +300,17 @@ button > p {
     .main-sneaker {
         width: 35rem;
         height: 35rem;
+        cursor: pointer;
     }
     .container-img {
         height: 7rem;
         width: 7rem;
         border-radius: 1rem;
+        overflow: hidden;
     }
     .sneaker-previews img {
         width: 100%;
         height: 100%;
-        overflow: hidden;
         cursor: pointer;
     }
     .active {
@@ -367,5 +369,19 @@ button > p {
         left: 65%;
         border: none;
         box-shadow: 2px 2px 2px 2px var(--very-dark-blue);
+    }
+    .lightbox {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-top: -10rem;
+        width: 100%;
+    }
+    .main-sneaker-lightbox {
+        height: 40rem;
+        width: 40rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
