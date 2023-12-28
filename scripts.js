@@ -17,6 +17,8 @@ const itemsInCart = document.querySelector(".full");
 const emptyCart = document.querySelector(".empty");
 const cartStyles = document.querySelector(".different-cart");
 const picturesClick = document.querySelector(".sneaker-previews");
+const modal = document.querySelector(".lightbox");
+const modalBackground = document.querySelector(".lightbox-overlay")
 
 let itemCount = 0;
 let widthScreen = window.matchMedia("(min-width: 1440px)");
@@ -174,5 +176,8 @@ deleteItem.addEventListener("click", () => {
 // If no items in cart
 // Add .cart-item
 function lightBox() {
+    modal.setAttribute("style", "display: block");
+    modalBackground.setAttribute("style", "display: block")
+
     console.log("Light Box")
 }
