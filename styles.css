@@ -400,4 +400,21 @@ button > p {
         margin-right: auto;
         cursor: default;
     }
+    .close-lightbox {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 1.5rem;
+    }
+    /* .close-lightbox span {
+        
+    } */
+    .close-mask {
+        height: 1.5rem;
+        width: 1.5rem;
+        cursor: pointer;
+        mask-image: url("./images/icon-close.svg");
+        background-color: var(--orange);
+        mask-repeat: no-repeat;
+        mask-size: cover;
+    }
 }
