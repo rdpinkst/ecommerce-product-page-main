@@ -3,8 +3,8 @@ const menu = document.querySelector("#mobile");
 const close = document.querySelector(".close");
 const mainContent = document.querySelector("main");
 const headerContent = document.querySelector("header");
-const next = document.querySelector(".next");
-const previous = document.querySelector(".previous");
+const next = document.querySelectorAll(".next");
+const previous = document.querySelectorAll(".previous");
 const sneakerPic = document.querySelector(".main-sneaker");
 const quantity = document.querySelector(".quantity-item");
 const plus = document.querySelector(".plus");
@@ -20,6 +20,7 @@ const picturesClick = document.querySelector(".sneaker-previews");
 const modal = document.querySelector(".lightbox");
 const modalBackground = document.querySelector(".lightbox-overlay");
 const closeModal = document.querySelector(".close-mask");
+const lightBoxPicture = document.querySelector(".main-sneaker-lightbox");
 
 let itemCount = 0;
 let widthScreen = window.matchMedia("(min-width: 1440px)");
@@ -50,14 +51,24 @@ close.addEventListener("click", (event) => {
     headerContent.classList.remove("blur");
 })
 
-next.addEventListener("click", newPicture);
-previous.addEventListener("click", newPicture);
+next.forEach((btn) => btn.addEventListener("click", newPicture));
+previous.forEach((btn) => btn.addEventListener("click", newPicture));
 
 function newPicture(event) {
-    const strPic = sneakerPic.getAttribute("src");
+    let strPic = "";
+    let newPic = ""
+
+    if(event.currentTarget.classList.contains("switch-image-modal")) {
+        strPic = lightBoxPicture.getAttribute("src");
+        newPic = changePicture(strPic, event.target);
+        lightBoxPicture.setAttribute("src", newPic);
+    } else {
+        strPic = sneakerPic.getAttribute("src");
+        newPic = changePicture(strPic, event.target)
+        sneakerPic.setAttribute("src", newPic);
+    }
     
-    const newPic = changePicture(strPic, event.target)
-    sneakerPic.setAttribute("src", newPic);
+    
 }
 
 function changePicture(srcString, direction) {
@@ -178,10 +189,8 @@ deleteItem.addEventListener("click", () => {
 // If no items in cart
 // Add .cart-item
 function lightBox() {
-    const lightBoxPicture = document.querySelector(".main-sneaker-lightbox");
     let currentPicture = sneakerPic.getAttribute("src");
 
-    console.log(currentPicture)
     lightBoxPicture.setAttribute("src", currentPicture)
 
     modal.setAttribute("style", "display: block");
