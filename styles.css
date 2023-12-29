@@ -265,6 +265,9 @@ button > p {
     color: var(--very-dark-blue);
     margin-left: 0.5rem;
 }
+.lightbox {
+    display: none;
+}
 
 @media (min-width: 1440px) {
     body {
@@ -416,5 +419,8 @@ button > p {
         background-color: var(--orange);
         mask-repeat: no-repeat;
         mask-size: cover;
+    }
+    .switch-image-modal {
+        display: block;
     }
 }

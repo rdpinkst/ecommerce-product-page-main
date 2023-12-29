@@ -18,10 +18,12 @@ const emptyCart = document.querySelector(".empty");
 const cartStyles = document.querySelector(".different-cart");
 const picturesClick = document.querySelector(".sneaker-previews");
 const modal = document.querySelector(".lightbox");
-const modalBackground = document.querySelector(".lightbox-overlay")
+const modalBackground = document.querySelector(".lightbox-overlay");
+const closeModal = document.querySelector(".close-mask");
 
 let itemCount = 0;
 let widthScreen = window.matchMedia("(min-width: 1440px)");
+
 
 if(widthScreen.matches) {
     sneakerPic.addEventListener("click", lightBox)
@@ -176,8 +178,20 @@ deleteItem.addEventListener("click", () => {
 // If no items in cart
 // Add .cart-item
 function lightBox() {
+    const lightBoxPicture = document.querySelector(".main-sneaker-lightbox");
+    let currentPicture = sneakerPic.getAttribute("src");
+
+    console.log(currentPicture)
+    lightBoxPicture.setAttribute("src", currentPicture)
+
     modal.setAttribute("style", "display: block");
-    modalBackground.setAttribute("style", "display: block")
+    modalBackground.setAttribute("style", "display: block");
+
 
     console.log("Light Box")
 }
+
+closeModal.addEventListener("click", (event) => {
+    modal.setAttribute("style", "display: none");
+    modalBackground.setAttribute("style", "display: none");
+})
